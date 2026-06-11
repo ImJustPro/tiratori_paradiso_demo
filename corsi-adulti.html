@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corsi adulti 300/50m - Tiratori Paradiso</title>
+<meta name="description" content="Iscrizione al corso adulti di tiro 300m e 50m della Società Tiratori Paradiso, Grancia. Date, costi e formulario.">
+<link rel="stylesheet" href="stile.css">
+<link rel="icon" href="img/logo.png">
+</head>
+<body>
+
+<header class="testata">
+  <div class="testata-int">
+    <img class="stemma" src="img/logo.png" alt="Stemma della Società Tiratori San Salvatore - Paradiso">
+    <div>
+      <h1><a href="index.html">Società Tiratori San Salvatore - Paradiso</a></h1>
+      <p class="sottotitolo">Stand di tiro 300m e 50m &middot; Via Molago 21, 6916 Grancia &middot; aggiornato il 10.06.2026</p>
+    </div>
+  </div>
+</header>
+
+<nav class="menu" aria-label="Menu principale">
+  <div class="menu-int">
+    <button id="apri-menu" aria-expanded="false" aria-controls="voci-menu">&#9776; MENU</button>
+    <ul id="voci-menu">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="tiro---to-tc.html" class="evidenza">TIRO OBBLIGATORIO</a></li>
+        <li><a href="corsi-adulti.html" class="attivo">CORSI ADULTI</a></li>
+        <li><a href="iscrizioni-gare-300m.html">GARE 300/50m</a></li>
+        <li><a href="nuovi-regolamenti-2026.html">CALENDARIO/REGOLAMENTI</a></li>
+        <li><a href="societa.html">LA SOCIETÀ</a></li>
+        <li><a href="palmares.html">PALMARÈS</a></li>
+        <li><a href="e-mail.html">CONTATTI</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+<h2>Corso adulti 300m e 50m - anno 2026</h2>
+
+<p>Il corso adulti &egrave; il modo migliore per avvicinarsi al tiro sportivo: i nostri monitori seguono ogni partecipante passo per passo, dalla sicurezza alla tecnica di tiro. Non serve nessuna esperienza precedente.</p>
+
+<div class="riquadro">
+<table class="orari">
+  <caption>Date e costi</caption>
+  <tr><th>Corso</th><th>Inizio</th><th>Costo</th></tr>
+  <tr><td>Pistola 50m</td><td>18 aprile</td><td>fr. 200.00</td></tr>
+  <tr><td>Fucile 300m</td><td>25 aprile</td><td>fr. 200.00</td></tr>
+  <tr><td>Corso combinato 300m + 50m</td><td>&nbsp;</td><td>fr. 300.00</td></tr>
+</table>
+<p style="margin-bottom:0">Ulteriori informazioni saranno inviate a tutti gli iscritti.</p>
+</div>
+
+<div class="due-colonne">
+  <figure style="margin:0"><img src="img/stand-300m.jpg" alt="La linea di tiro a 300m dello stand di Grancia" style="border-radius:6px"><figcaption style="font-size:.9rem;color:#6b675e">La linea di tiro 300m</figcaption></figure>
+  <figure style="margin:0"><img src="img/stand-50m.jpg" alt="Le postazioni a 50m dello stand di Grancia" style="border-radius:6px"><figcaption style="font-size:.9rem;color:#6b675e">Le postazioni 50m</figcaption></figure>
+</div>
+
+<h3>Formulario d&rsquo;iscrizione</h3>
+<p class="nota-modulo">Compilando il modulo si aprir&agrave; il vostro programma di posta con i dati gi&agrave; inseriti: baster&agrave; <strong>allegare la copia della carta d&rsquo;identit&agrave; (CH) o del permesso C (stranieri)</strong> in formato PDF o JPG e premere invia. In alternativa potete scriverci direttamente dalla pagina <a href="e-mail.html">contatti</a>.</p>
+
+<div class="riquadro">
+<form onsubmit="return invioModulo(this, 'matteigiorgio@tiratoriparadiso.ch', 'Iscrizione corso adulti 2026')">
+  <div class="campo"><label for="ca-nome">Nome e cognome <span class="obbl">*</span></label>
+    <input id="ca-nome" name="Nome e cognome" required></div>
+  <div class="campo"><label for="ca-nascita">Data di nascita <span class="obbl">*</span></label>
+    <input id="ca-nascita" name="Data di nascita" required placeholder="gg.mm.aaaa"></div>
+  <div class="campo"><label for="ca-via">Via e numero <span class="obbl">*</span></label>
+    <input id="ca-via" name="Via e numero" required></div>
+  <div class="campo"><label for="ca-cap">CAP e paese <span class="obbl">*</span></label>
+    <input id="ca-cap" name="CAP e paese" required></div>
+  <div class="campo"><label for="ca-naz">Nazionalit&agrave; <span class="obbl">*</span></label>
+    <select id="ca-naz" name="Nazionalita" required>
+      <option value="">- scegliere -</option>
+      <option>Svizzera</option>
+      <option>Straniera (permesso C)</option>
+    </select></div>
+  <div class="campo"><label for="ca-tel">Telefono <span class="obbl">*</span></label>
+    <input id="ca-tel" name="Telefono" type="tel" required></div>
+  <div class="campo"><label for="ca-mail">E-mail <span class="obbl">*</span></label>
+    <input id="ca-mail" name="E-mail" type="email" required></div>
+  <div class="campo"><label for="ca-disc">Disciplina <span class="obbl">*</span></label>
+    <select id="ca-disc" name="Disciplina" required>
+      <option value="">- scegliere -</option>
+      <option>Fucile 300m</option>
+      <option>Pistola 50m</option>
+      <option>Combinato 300m + 50m</option>
+    </select></div>
+  <div class="campo"><label for="ca-freq">Ho gi&agrave; frequentato un corso di tiro</label>
+    <select id="ca-freq" name="Gia frequentato un corso">
+      <option>no</option>
+      <option>s&igrave;</option>
+    </select></div>
+  <div class="campo"><label for="ca-presso">Se s&igrave;, presso chi</label>
+    <input id="ca-presso" name="Presso chi"></div>
+  <div class="campo"><label for="ca-socio">Sono gi&agrave; socio della societ&agrave; di</label>
+    <input id="ca-socio" name="Gia socio di"></div>
+  <div class="campo"><label for="ca-oss">Osservazioni o domande</label>
+    <textarea id="ca-oss" name="Osservazioni" rows="4"></textarea></div>
+  <button type="submit">Prepara l&rsquo;e-mail d&rsquo;iscrizione</button>
+  <p class="nota-modulo">Ricordatevi di allegare il documento d&rsquo;identit&agrave; prima di inviare.</p>
+</form>
+</div>
+
+</main>
+
+<footer>
+  <div class="footer-int">
+    <div>
+      <h4>Dove siamo</h4>
+      <p>Stand di tiro Paradiso<br>Via Molago 21<br>6916 Grancia</p>
+      <p><a href="dove-siamo.html">Indicazioni stradali</a></p>
+    </div>
+    <div>
+      <h4>Collegamenti rapidi</h4>
+      <ul>
+        <li><a href="tiro---to-tc.html">Date tiro obbligatorio</a></li>
+        <li><a href="corsi-adulti.html">Corsi adulti 300/50m</a></li>
+        <li><a href="comitato.html">Comitato</a></li>
+        <li><a href="corso-giovani.html">Corso giovani</a></li>
+        <li><a href="links-utili.html">Links utili</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contatti</h4>
+      <p><a href="e-mail.html">Modulo di contatto</a></p>
+      <p>Webmaster:<br><a href="mailto:matteigiorgio@tiratoriparadiso.ch">matteigiorgio@tiratoriparadiso.ch</a></p>
+    </div>
+  </div>
+  <div class="riga-finale">&copy; Società Tiratori San Salvatore - Paradiso, Grancia</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

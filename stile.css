@@ -1,0 +1,394 @@
+/* ============================================================
+   Società Tiratori San Salvatore - Paradiso
+   Foglio di stile unico per tutte le pagine
+   Colori ripresi dallo stemma sociale: verde, giallo, rosso
+   ============================================================ */
+
+:root{
+  --verde:#1e5b32;
+  --verde-scuro:#15431f;
+  --giallo:#f3c52d;
+  --rosso:#c8102e;
+  --carta:#f6f4ee;
+  --bianco:#ffffff;
+  --inchiostro:#26241f;
+  --grigio:#6b675e;
+  --bordo:#ddd8cc;
+}
+
+*{ box-sizing:border-box; }
+
+html{ scroll-behavior:smooth; }
+
+body{
+  margin:0;
+  background:var(--carta);
+  color:var(--inchiostro);
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size:18px;
+  line-height:1.55;
+}
+
+img{ max-width:100%; height:auto; }
+
+a{ color:var(--verde); }
+a:hover{ color:var(--rosso); }
+a:focus-visible{ outline:3px solid var(--rosso); outline-offset:2px; }
+
+/* ---------- Testata ---------- */
+
+.testata{
+  background:var(--verde);
+  color:#fff;
+  border-bottom:5px solid var(--giallo);
+}
+
+.testata-int{
+  max-width:1050px;
+  margin:0 auto;
+  padding:14px 16px 10px;
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+.testata img.stemma{
+  width:86px; height:auto; flex-shrink:0;
+}
+
+.testata h1{
+  margin:0;
+  font-size:1.55rem;
+  line-height:1.15;
+  letter-spacing:.5px;
+}
+
+.testata .sottotitolo{
+  margin:3px 0 0;
+  font-size:.95rem;
+  color:#e8e3d2;
+}
+
+.testata a{ color:#fff; text-decoration:none; }
+
+/* ---------- Menu ---------- */
+
+nav.menu{
+  background:var(--verde-scuro);
+}
+
+nav.menu .menu-int{
+  max-width:1050px;
+  margin:0 auto;
+}
+
+#apri-menu{
+  display:none;
+  width:100%;
+  background:var(--verde-scuro);
+  color:#fff;
+  border:0;
+  font-size:1.1rem;
+  font-weight:bold;
+  padding:12px;
+  cursor:pointer;
+  font-family:inherit;
+}
+
+nav.menu ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-wrap:wrap;
+}
+
+nav.menu li a{
+  display:block;
+  padding:11px 14px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:.92rem;
+  letter-spacing:.4px;
+  border-bottom:4px solid transparent;
+}
+
+nav.menu li a:hover{ background:var(--verde); color:#fff; }
+nav.menu li a.attivo{ border-bottom-color:var(--giallo); background:var(--verde); }
+nav.menu li a.evidenza{ color:var(--giallo); }
+
+/* ---------- Contenuto ---------- */
+
+main{
+  max-width:1050px;
+  margin:0 auto;
+  padding:26px 16px 50px;
+}
+
+h2{
+  color:var(--verde-scuro);
+  font-size:1.7rem;
+  margin:0 0 .4em;
+  border-bottom:3px solid var(--giallo);
+  padding-bottom:.2em;
+}
+
+h3{
+  color:var(--verde-scuro);
+  font-size:1.25rem;
+  margin:1.4em 0 .4em;
+}
+
+.riquadro{
+  background:var(--bianco);
+  border:1px solid var(--bordo);
+  border-radius:6px;
+  padding:18px 20px;
+  margin:0 0 22px;
+}
+
+.due-colonne{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+}
+
+@media (max-width:760px){
+  .due-colonne{ grid-template-columns:1fr; }
+}
+
+/* Riquadro in evidenza per il tiro obbligatorio */
+.avviso-to{
+  background:var(--giallo);
+  border:3px solid var(--verde-scuro);
+  border-radius:8px;
+  padding:20px 22px;
+  margin:0 0 26px;
+}
+.avviso-to h2{
+  border:0; padding:0;
+  color:var(--verde-scuro);
+  font-size:1.5rem;
+  margin-bottom:.3em;
+}
+.avviso-to .data-grande{
+  font-size:2rem;
+  font-weight:bold;
+  color:var(--rosso);
+  margin:.1em 0;
+}
+.avviso-to p{ margin:.4em 0; }
+
+.bottone{
+  display:inline-block;
+  background:var(--verde);
+  color:#fff !important;
+  text-decoration:none;
+  font-weight:bold;
+  padding:12px 22px;
+  border-radius:6px;
+  margin-top:8px;
+  font-size:1.05rem;
+}
+.bottone:hover{ background:var(--rosso); }
+
+.bottone-secondario{
+  display:inline-block;
+  background:#fff;
+  color:var(--verde-scuro) !important;
+  border:2px solid var(--verde-scuro);
+  text-decoration:none;
+  font-weight:bold;
+  padding:10px 18px;
+  border-radius:6px;
+  margin:6px 6px 0 0;
+}
+.bottone-secondario:hover{ background:var(--giallo); }
+
+/* ---------- Tabelle ---------- */
+
+table.orari{
+  width:100%;
+  border-collapse:collapse;
+  background:#fff;
+  font-size:1.05rem;
+}
+table.orari caption{
+  text-align:left;
+  font-weight:bold;
+  padding-bottom:8px;
+  color:var(--verde-scuro);
+}
+table.orari th{
+  background:var(--verde);
+  color:#fff;
+  text-align:left;
+  padding:10px 12px;
+}
+table.orari td{
+  border-bottom:1px solid var(--bordo);
+  padding:12px;
+}
+table.orari tr:nth-child(even) td{ background:#faf8f2; }
+table.orari tr.passata td{ color:var(--grigio); text-decoration:line-through; }
+table.orari tr.prossima td{ background:#fdf3cd; font-weight:bold; }
+
+/* ---------- Elenchi documenti ---------- */
+
+ul.documenti{ list-style:none; padding:0; margin:0; }
+ul.documenti li{
+  margin:0 0 10px;
+}
+ul.documenti a{
+  display:block;
+  background:#fff;
+  border:1px solid var(--bordo);
+  border-left:6px solid var(--rosso);
+  border-radius:4px;
+  padding:13px 16px;
+  text-decoration:none;
+  font-weight:bold;
+  color:var(--verde-scuro);
+}
+ul.documenti a:hover{ background:var(--giallo); }
+ul.documenti .tipo{ color:var(--grigio); font-weight:normal; font-size:.85rem; }
+
+/* ---------- Comitato ---------- */
+
+.scheda-membro{
+  background:#fff;
+  border:1px solid var(--bordo);
+  border-radius:6px;
+  padding:18px;
+  margin-bottom:20px;
+  display:grid;
+  grid-template-columns:170px 1fr;
+  gap:20px;
+}
+.scheda-membro img{
+  width:100%;
+  border-radius:4px;
+  border:2px solid var(--verde);
+}
+.scheda-membro h3{ margin:0 0 .2em; }
+.scheda-membro .carica{
+  color:var(--rosso);
+  font-weight:bold;
+  margin:0 0 .6em;
+}
+.scheda-membro p{ margin:.3em 0; }
+@media (max-width:560px){
+  .scheda-membro{ grid-template-columns:1fr; }
+  .scheda-membro img{ max-width:220px; }
+}
+
+/* ---------- Gallerie foto ---------- */
+
+.galleria{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(260px,1fr));
+  gap:18px;
+}
+.galleria figure{
+  margin:0;
+  background:#fff;
+  border:1px solid var(--bordo);
+  border-radius:6px;
+  padding:8px;
+}
+.galleria img{ width:100%; border-radius:4px; display:block; }
+.galleria figcaption{
+  padding:8px 4px 2px;
+  font-size:.95rem;
+  font-weight:bold;
+  color:var(--verde-scuro);
+  text-align:center;
+}
+
+/* ---------- Moduli ---------- */
+
+form .campo{ margin-bottom:14px; }
+form label{ display:block; font-weight:bold; margin-bottom:4px; }
+form input, form select, form textarea{
+  width:100%;
+  padding:11px;
+  font-size:1rem;
+  font-family:inherit;
+  border:1px solid var(--bordo);
+  border-radius:4px;
+  background:#fff;
+}
+form input:focus, form select:focus, form textarea:focus{
+  outline:3px solid var(--giallo);
+  border-color:var(--verde);
+}
+form .obbl{ color:var(--rosso); }
+form button{
+  background:var(--verde);
+  color:#fff;
+  border:0;
+  font-size:1.1rem;
+  font-weight:bold;
+  font-family:inherit;
+  padding:13px 26px;
+  border-radius:6px;
+  cursor:pointer;
+}
+form button:hover{ background:var(--rosso); }
+.nota-modulo{ font-size:.92rem; color:var(--grigio); }
+
+/* ---------- Piè di pagina ---------- */
+
+footer{
+  background:var(--verde-scuro);
+  color:#e8e3d2;
+  margin-top:30px;
+  border-top:5px solid var(--giallo);
+}
+footer .footer-int{
+  max-width:1050px;
+  margin:0 auto;
+  padding:26px 16px;
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:24px;
+  font-size:.95rem;
+}
+footer h4{ color:#fff; margin:0 0 .5em; font-size:1.05rem; }
+footer a{ color:var(--giallo); }
+footer ul{ list-style:none; margin:0; padding:0; }
+footer li{ margin-bottom:6px; }
+footer .riga-finale{
+  border-top:1px solid #2c6b3f;
+  text-align:center;
+  padding:12px;
+  font-size:.85rem;
+  color:#bcd3c1;
+}
+@media (max-width:760px){
+  footer .footer-int{ grid-template-columns:1fr; }
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width:760px){
+  body{ font-size:17px; }
+  .testata-int{ flex-direction:column; text-align:center; gap:8px; }
+  .testata img.stemma{ width:72px; }
+  #apri-menu{ display:block; }
+  nav.menu ul{
+    display:none;
+    flex-direction:column;
+  }
+  nav.menu ul.aperto{ display:flex; }
+  nav.menu li a{
+    font-size:1.05rem;
+    padding:14px 18px;
+    border-bottom:1px solid #2c6b3f;
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+}
